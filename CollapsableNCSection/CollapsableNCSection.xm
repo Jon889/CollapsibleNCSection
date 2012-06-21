@@ -2,38 +2,49 @@
 // Logos by Dustin Howett
 // See http://iphonedevwiki.net/index.php/Logos
 
-#error iOSOpenDev post-project creation from template requirements (remove these lines after completed) -- \
-	Link to libsubstrate.dylib: \
-	(1) go to TARGETS > Build Phases > Link Binary With Libraries and add /opt/iOSOpenDev/lib/libsubstrate.dylib \
-	(2) remove these lines from *.xm files (not *.mm files as they're automatically generated from *.xm files)
 
-%hook ClassName
+#import "JBPCollapsableNCController.h"
+#import <UIKit/UIKit.h>
+#import <SpringBoard/SBBulletinHeaderView.h>
+#import <SpringBoard/SBBulletinListController.h>
+#import <SpringBoard/SBBulletinListSection.h>
 
-+ (id)sharedInstance
-{
-	%log;
+%hook SBBulletinHeaderView 
 
-	return %orig;
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    NSMutableArray *cSIDs = [[JBPCollapsableNCController sharedInstance] collapsedSIDs];
+    if ([cSIDs containsObject:[self sectionID]]) {
+        [cSIDs removeObject:[self sectionID]];
+    } else {
+        [cSIDs addObject:[self sectionID]];
+    }
+    [(SBBulletinListController *)[%c(SBBulletinListController) sharedInstance] _reloadTableView];
+    NSString *newStr = [self _sectionNameForSectionID:[self sectionID]];
+    UILabel *&_sectionLabel(MSHookIvar<UILabel *>(self, "_sectionLabel"));
+    [_sectionLabel setText:newStr];
 }
 
-- (void)messageWithNoReturnAndOneArgument:(id)originalArgument
-{
-	%log;
-
-	%orig(originalArgument);
-	
-	// or, for exmaple, you could use a custom value instead of the original argument: %orig(customValue);
+- (id)_sectionNameForSectionID:(id)arg1 {
+    if ([[[JBPCollapsableNCController sharedInstance] collapsedSIDs] containsObject:[self sectionID]]) {
+        NSDictionary *&_enabledSectionsByID(MSHookIvar<NSDictionary *>([%c(SBBulletinListController) sharedInstance], "_enabledSectionsByID"));
+        return [NSString stringWithFormat:@"%@ (%i)", %orig, [(SBBulletinListSection *)[_enabledSectionsByID objectForKey:[self sectionID]] bulletinCount]];
+    } else {
+        return %orig;
+    }
 }
 
-- (id)messageWithReturnAndNoArguments
-{
-	%log;
+%end
 
-	id originalReturnOfMessage = %orig;
-	
-	// for example, you could modify the original return value before returning it: [SomeOtherClass doSomethingToThisObject:originalReturnOfMessage];
+%hook SBBulletinListController 
 
-	return originalReturnOfMessage;
+- (int)tableView:(id)arg1 numberOfRowsInSection:(int)arg2 {
+    NSArray *csids = [[JBPCollapsableNCController sharedInstance] collapsedSIDs];
+    NSArray *&_visibleSectionIDs(MSHookIvar<NSArray *>(self, "_visibleSectionIDs"));
+    NSString *currentSID = [_visibleSectionIDs objectAtIndex:arg2];
+    if ([csids containsObject:currentSID]) {
+        return 0;
+    }
+    return %orig;
 }
 
 %end
