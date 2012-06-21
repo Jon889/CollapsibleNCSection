@@ -1,0 +1,335 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABA00E851592A6EA000B3FE3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA00E841592A6EA000B3FE3 /* Foundation.framework */; };
+		ABA00E901592A6EA000B3FE3 /* CollapsableNCSection.mm in Sources */ = {isa = PBXBuildFile; fileRef = ABA00E8F1592A6EA000B3FE3 /* CollapsableNCSection.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ABA00E811592A6EA000B3FE3 /* CollapsableNCSection.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = CollapsableNCSection.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABA00E841592A6EA000B3FE3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ABA00E891592A6EA000B3FE3 /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = control.txt; path = Package/DEBIAN/control.txt; sourceTree = "<group>"; };
+		ABA00E8A1592A6EA000B3FE3 /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
+		ABA00E8C1592A6EA000B3FE3 /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
+		ABA00E8D1592A6EA000B3FE3 /* CollapsableNCSection-Prefix.pch */ = {isa = PBXFileReference; path = "CollapsableNCSection-Prefix.pch"; sourceTree = "<group>"; };
+		ABA00E8E1592A6EA000B3FE3 /* CollapsableNCSection.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = CollapsableNCSection.xm; sourceTree = "<group>"; };
+		ABA00E8F1592A6EA000B3FE3 /* CollapsableNCSection.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CollapsableNCSection.mm; sourceTree = "<group>"; };
+		ABA00E941592A6EA000B3FE3 /* CollapsableNCSection.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = CollapsableNCSection.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/CollapsableNCSection.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABA00E7D1592A6EA000B3FE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABA00E851592A6EA000B3FE3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABA00E741592A6EA000B3FE3 = {
+			isa = PBXGroup;
+			children = (
+				ABA00E861592A6EA000B3FE3 /* CollapsableNCSection */,
+				ABA00E831592A6EA000B3FE3 /* Frameworks */,
+				ABA00E821592A6EA000B3FE3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABA00E821592A6EA000B3FE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABA00E811592A6EA000B3FE3 /* CollapsableNCSection.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABA00E831592A6EA000B3FE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABA00E841592A6EA000B3FE3 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABA00E861592A6EA000B3FE3 /* CollapsableNCSection */ = {
+			isa = PBXGroup;
+			children = (
+				ABA00E8E1592A6EA000B3FE3 /* CollapsableNCSection.xm */,
+				ABA00E8F1592A6EA000B3FE3 /* CollapsableNCSection.mm */,
+				ABA00E871592A6EA000B3FE3 /* Package */,
+				ABA00E8B1592A6EA000B3FE3 /* Supporting Files */,
+			);
+			path = CollapsableNCSection;
+			sourceTree = "<group>";
+		};
+		ABA00E871592A6EA000B3FE3 /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				ABA00E881592A6EA000B3FE3 /* DEBIAN */,
+				ABA00E911592A6EA000B3FE3 /* Library */,
+			);
+			name = Package;
+			sourceTree = "<group>";
+		};
+		ABA00E881592A6EA000B3FE3 /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				ABA00E891592A6EA000B3FE3 /* control.txt */,
+				ABA00E8A1592A6EA000B3FE3 /* control */,
+			);
+			name = DEBIAN;
+			sourceTree = "<group>";
+		};
+		ABA00E8B1592A6EA000B3FE3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABA00E8C1592A6EA000B3FE3 /* PackageVersion.plist */,
+				ABA00E8D1592A6EA000B3FE3 /* CollapsableNCSection-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ABA00E911592A6EA000B3FE3 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				ABA00E921592A6EA000B3FE3 /* MobileSubstrate */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		ABA00E921592A6EA000B3FE3 /* MobileSubstrate */ = {
+			isa = PBXGroup;
+			children = (
+				ABA00E931592A6EA000B3FE3 /* DynamicLibraries */,
+			);
+			name = MobileSubstrate;
+			sourceTree = "<group>";
+		};
+		ABA00E931592A6EA000B3FE3 /* DynamicLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				ABA00E941592A6EA000B3FE3 /* CollapsableNCSection.plist */,
+			);
+			name = DynamicLibraries;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		ABA00E7E1592A6EA000B3FE3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		ABA00E801592A6EA000B3FE3 /* CollapsableNCSection */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABA00E971592A6EA000B3FE3 /* Build configuration list for PBXNativeTarget "CollapsableNCSection" */;
+			buildPhases = (
+				ABA00E7B1592A6EA000B3FE3 /* ShellScript */,
+				ABA00E7C1592A6EA000B3FE3 /* Sources */,
+				ABA00E7D1592A6EA000B3FE3 /* Frameworks */,
+				ABA00E7E1592A6EA000B3FE3 /* Headers */,
+				ABA00E7F1592A6EA000B3FE3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CollapsableNCSection;
+			productName = CollapsableNCSection;
+			productReference = ABA00E811592A6EA000B3FE3 /* CollapsableNCSection.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABA00E761592A6EA000B3FE3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = ABA00E791592A6EA000B3FE3 /* Build configuration list for PBXProject "CollapsableNCSection" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ABA00E741592A6EA000B3FE3;
+			productRefGroup = ABA00E821592A6EA000B3FE3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABA00E801592A6EA000B3FE3 /* CollapsableNCSection */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ABA00E7B1592A6EA000B3FE3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp-logos";
+		};
+		ABA00E7F1592A6EA000B3FE3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABA00E7C1592A6EA000B3FE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABA00E901592A6EA000B3FE3 /* CollapsableNCSection.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		ABA00E951592A6EA000B3FE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = "$(iOSOpenDevPath)/frameworks/**";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Release;
+		};
+		ABA00E961592A6EA000B3FE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = "$(iOSOpenDevPath)/frameworks/**";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Debug;
+		};
+		ABA00E981592A6EA000B3FE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CollapsableNCSection/CollapsableNCSection-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = NO;
+				iOSOpenDevRespringOnInstall = NO;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Release;
+		};
+		ABA00E991592A6EA000B3FE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CollapsableNCSection/CollapsableNCSection-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = NO;
+				iOSOpenDevRespringOnInstall = NO;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABA00E791592A6EA000B3FE3 /* Build configuration list for PBXProject "CollapsableNCSection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABA00E951592A6EA000B3FE3 /* Release */,
+				ABA00E961592A6EA000B3FE3 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABA00E971592A6EA000B3FE3 /* Build configuration list for PBXNativeTarget "CollapsableNCSection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABA00E981592A6EA000B3FE3 /* Release */,
+				ABA00E991592A6EA000B3FE3 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABA00E761592A6EA000B3FE3 /* Project object */;
+}
